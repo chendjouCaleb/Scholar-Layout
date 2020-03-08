@@ -30,13 +30,16 @@ searchBarInput.addEventListener("blur", () => {
 
 document.onreadystatechange = () => {
 
-
+    let brand = document.querySelector(".toolbar-brand");
+    let notification = new Notification(document.querySelector<HTMLElement>('.notification'));
     let sidebar = document.querySelector(".app-sidenav");
     let mainContainer = document.querySelector(".main-container");
-
+    notification.show();
 
     let sidebarCollapseButton = sidebar.querySelector(".sidebar-collapse-button");
-
+    brand.addEventListener('click', () => {
+        notification.show();
+    })
 
     let iconOnly = false;
 
@@ -106,5 +109,31 @@ export class LeftPanel {
 
     toggle() {
         this._isVisible ? this.hide() : this.show();
+    }
+}
+
+export class Notification {
+    private notificationBox: HTMLElement;
+
+    constructor(private notification: HTMLElement) {
+        this.notificationBox = notification;
+        console.log(this.notificationBox);
+
+        let closeBtn = this.notificationBox.querySelector('.notification__btn');
+
+        closeBtn.addEventListener("click", () => {
+            this.hide();
+        })
+    }
+
+    public show() {
+        this.notificationBox.classList.remove("hidden");
+        setTimeout(() => {
+            this.hide()
+        }, 5000);
+    }
+
+    public hide() {
+        this.notificationBox.classList.add("hidden");
     }
 }

@@ -1,196 +1,216 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Web App</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/reset.css">
-
-
     <style>
 
     </style>
 </head>
+
 <body class="ms-Fabric">
 
-<div class="app-container">
-    <div class="app-toolbar">
-        <div class="toolbar-brand ms-fontSize-20 p-3" style="padding: 0 20px">Scholar</div>
+    <div class="app-container">
+        <div class="app-toolbar">
+            <div class="toolbar-brand ms-fontSize-20 p-3" style="padding: 0 20px">Scholar</div>
 
-        <div class="toolbar-search-bar search-bar" id="search-bar">
-            <span class="search-bar-icon ms-Icon ms-Icon--Zoom"></span>
-            <div class="search-bar-input-container">
-                <input type="text" autocomplete="off" class="search-bar-input">
+            <div class="toolbar-search-bar search-bar" id="search-bar">
+                <span class="search-bar-icon ms-Icon ms-Icon--Zoom"></span>
+                <div class="search-bar-input-container">
+                    <input type="text" autocomplete="off" class="search-bar-input">
+                </div>
+
             </div>
 
+            <div class="toolbar-action">
+
+
+                <span class="toolbar-button" id="notification-panel-button">
+                    <i class="ms-Icon ms-Icon--Ringer"></i>
+
+                    <span class="ringer-badge">10</span>
+                </span>
+
+
+                <span class="toolbar-button" id="message-panel-button">
+                    <i class="ms-Icon ms-Icon--Message"></i>
+                    <span class="ringer-badge">3</span>
+                </span>
+
+
+                <span class="toolbar-button" id="event-panel-button">
+                    <i class="ms-Icon ms-Icon--CalendarDay"></i>
+                    <span class="ringer-badge">2</span>
+                </span>
+
+                <span class="toolbar-button" id="settings-panel-button">
+                    <i class="ms-Icon ms-Icon--Settings"></i>
+                    <span class="ringer-badge">5</span>
+                </span>
+
+                <span class="toolbar-button toolbar-personna" id="account-panel-button">
+                    <img class="toolbar-personna-image" src="/assets/personna.jpg" alt="user-image" />
+                </span>
+            </div>
         </div>
 
-        <div class="toolbar-action">
 
+        <div class="main-container">
+            Main part
+            <div style="width: 100%; height: 100%">
+            </div>
+        </div>
 
-            <span class="toolbar-button" id="notification-panel-button">
-                <i class="ms-Icon ms-Icon--Ringer"></i>
+        <div class="app-sidenav">
 
-                <span class="ringer-badge">10</span>
+            <span class="sidenav-callapse">
+                <span class="flex-layout">
+                    <i class="sidenav-icon sidebar-collapse-button ms-Icon ms-Icon--Breadcrumb"></i>
+
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--Home"></i>
+                    <span class="sidebar-item-label">Accueil</span>
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--BIDashboard"></i>
+                    <span class="sidebar-item-label">Tableau de bord</span>
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--Inbox"></i>
+                    <span class="sidebar-item-label">Boite de reception</span>
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--Contact"></i>
+                    <span class="sidebar-item-label">Enseignants</span>
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--People"></i>
+                    <span class="sidebar-item-label">Etudiants</span>
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--TextDocument"></i>
+                    <span class="sidebar-item-label">Programmes scolaires</span>
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--PublishCourse"></i>
+                    <span class="sidebar-item-label">Cours publiées</span>
+                </span>
             </span>
 
 
-            <span class="toolbar-button" id="message-panel-button">
-                <i class="ms-Icon ms-Icon--Message"></i>
-                <span class="ringer-badge">3</span>
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--DateTime2"></i>
+                    <span class="sidebar-item-label">Programme</span>
+                </span>
+            </span>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--Financial"></i>
+                    <span class="sidebar-item-label">Finances</span>
+                </span>
             </span>
 
 
-            <span class="toolbar-button" id="event-panel-button">
-                <i class="ms-Icon ms-Icon--CalendarDay"></i>
-                <span class="ringer-badge">2</span>
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--ClassroomLogo"></i>
+                    <span class="sidebar-item-label">Classes</span>
+                </span>
             </span>
 
-            <span class="toolbar-button" id="settings-panel-button">
-                <i class="ms-Icon ms-Icon--Settings"></i>
+
+            <span class="sidenav-item">
+                <span class="flex-layout">
+                    <i class="sidenav-icon ms-Icon ms-Icon--Settings"></i>
+                    <span class="sidebar-item-label">Paramètres</span>
+                </span>
             </span>
 
-            <span class="toolbar-button toolbar-personna" id="account-panel-button">
-                <img class="toolbar-personna-image" src="/assets/personna.jpg" alt="user-image"/>
-            </span>
+            <div class="sidenav-background"></div>
+
+        </div>
+
+
+        <div class="left-panel" id="account-panel">
+            <div class="panel-title">
+                <h1 class="panel-title-text">Mon compte</h1>
+                <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
+            </div>
+        </div>
+
+        <div class="left-panel" id="settings-panel">
+            <div class="panel-title">
+                <span class="panel-title-text">Paramètres</span>
+                <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
+            </div>
+        </div>
+
+        <div class="left-panel" id="event-panel">
+            <div class="panel-title">
+                <span class="panel-title-text">Votre journée</span>
+                <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
+            </div>
+        </div>
+
+        <div class="left-panel" id="notification-panel">
+            <div class="panel-title">
+                <span class="panel-title-text">Notifications</span>
+                <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
+            </div>
+        </div>
+
+        <div class="left-panel" id="message-panel">
+            <div class="panel-title">
+                <span class="panel-title-text">Vos messages</span>
+                <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
+            </div>
         </div>
     </div>
-
-
-    <div class="main-container">
-        Main part
-        <div style="width: 2000px; height: 2000px"></div>
-    </div>
-
-    <div class="app-sidenav">
-
-        <span class="sidenav-callapse">
-            <span class="flex-layout">
-                <i class="sidenav-icon sidebar-collapse-button ms-Icon ms-Icon--Breadcrumb"></i>
-
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--Home"></i>
-                <span class="sidebar-item-label">Accueil</span>
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--BIDashboard"></i>
-                <span class="sidebar-item-label">Tableau de bord</span>
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--Inbox"></i>
-                <span class="sidebar-item-label">Boite de reception</span>
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--Contact"></i>
-                <span class="sidebar-item-label">Enseignants</span>
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--People"></i>
-                <span class="sidebar-item-label">Etudiants</span>
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--TextDocument"></i>
-                <span class="sidebar-item-label">Programmes scolaires</span>
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--PublishCourse"></i>
-                <span class="sidebar-item-label">Cours publiées</span>
-            </span>
-        </span>
-
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--DateTime2"></i>
-                <span class="sidebar-item-label">Programme</span>
-            </span>
-        </span>
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--Financial"></i>
-                <span class="sidebar-item-label">Finances</span>
-            </span>
-        </span>
-
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--ClassroomLogo"></i>
-                <span class="sidebar-item-label">Classes</span>
-            </span>
-        </span>
-
-
-        <span class="sidenav-item">
-            <span class="flex-layout">
-                <i class="sidenav-icon ms-Icon ms-Icon--Settings"></i>
-                <span class="sidebar-item-label">Paramètres</span>
-            </span>
-        </span>
-
-        <div class="sidenav-background"></div>
-
-    </div>
-
-
-    <div class="left-panel" id="account-panel">
-        <div class="panel-title">
-            <h1 class="panel-title-text">Mon compte</h1>
-            <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
+    <div class="notification hidden">
+        <div class="notification__header">
+            <div class="notification__title">
+                Notitification Box
+            </div>
+            <div class="notification__btn">
+                <i class="ms-Icon ms-Icon--Cancel notification-close-button"></i>
+            </div>
+        </div>
+        <div class="notification__body">
+            <div class="notification__img">
+                <img class="img_noti" src="/assets/personna.jpg" alt="Notification Icon">
+            </div>
+            <div class="notification__message">
+                Simple notification box to display alert message
+            </div>
         </div>
     </div>
-
-    <div class="left-panel" id="settings-panel">
-        <div class="panel-title">
-            <span class="panel-title-text">Paramètres</span>
-            <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
-        </div>
-    </div>
-
-    <div class="left-panel" id="event-panel">
-        <div class="panel-title">
-            <span class="panel-title-text">Votre journée</span>
-            <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
-        </div>
-    </div>
-
-    <div class="left-panel" id="notification-panel">
-        <div class="panel-title">
-            <span class="panel-title-text">Notifications</span>
-            <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
-        </div>
-    </div>
-
-    <div class="left-panel" id="message-panel">
-        <div class="panel-title">
-            <span class="panel-title-text">Vos messages</span>
-            <i class="ms-Icon ms-Icon--Cancel panel-close-button"></i>
-        </div>
-    </div>
-</div>
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
