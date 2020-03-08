@@ -349,3 +349,16 @@ body {
 .notification.hidden{
   right: -300px;
 }
+
+.notification .notification__header.success{
+  background-color: var(--success);
+}
+.notification .notification__header.danger{
+  background-color: var(--danger);
+}
+.notification .notification__header.warning{
+  background-color: var(--warning);
+}
+.notification .notification__header.info{
+  background-color: var(--info);
+}

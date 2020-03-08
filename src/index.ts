@@ -31,14 +31,14 @@ searchBarInput.addEventListener("blur", () => {
 document.onreadystatechange = () => {
 
     let brand = document.querySelector(".toolbar-brand");
-    let notification = new Notification(document.querySelector<HTMLElement>('.notification'));
+    let notification = new Notification('Hello world from typeScript HTML5 ,css3 good job!!!', 'danger');
     let sidebar = document.querySelector(".app-sidenav");
     let mainContainer = document.querySelector(".main-container");
-    notification.show();
-
+    // notification.open();
+    document.body.appendChild(notification.get());
     let sidebarCollapseButton = sidebar.querySelector(".sidebar-collapse-button");
     brand.addEventListener('click', () => {
-        notification.show();
+        notification.open();
     })
 
     let iconOnly = false;
@@ -113,27 +113,87 @@ export class LeftPanel {
 }
 
 export class Notification {
-    private notificationBox: HTMLElement;
+    private notificationBox = document.createElement('div') as HTMLDivElement;
+    private message: string;
+    private timeout: number = 3;
+    private notification_type = 'info'
+    constructor(msg: string, type?: string, delait?: number) {
+        this.message = msg;
 
-    constructor(private notification: HTMLElement) {
-        this.notificationBox = notification;
-        console.log(this.notificationBox);
+        if (delait)
+            this.timeout = delait;
+        if (type)
+            this.notification_type = type;
 
-        let closeBtn = this.notificationBox.querySelector('.notification__btn');
+        let icon = document.createElement('i') as HTMLElement;
+        let div_header = document.createElement('div') as HTMLElement;
+        let div_title_box = document.createElement('div') as HTMLElement;
+        let div_close_btn = document.createElement('div') as HTMLElement;
+        let div_body = document.createElement('div') as HTMLElement;
+        let div_img = document.createElement('div') as HTMLElement;
+        let img = document.createElement('img');
+        let div_message = document.createElement('div') as HTMLElement;
 
-        closeBtn.addEventListener("click", () => {
-            this.hide();
+        icon.classList.add('ms-Icon', 'ms-Icon--Cancel', 'notification-close-button');
+        div_header.classList.add('notification__header');
+        div_header.classList.add(this.notification_type);
+        div_title_box.classList.add('notification__title');
+        div_title_box.append('Notitification Box');
+        div_close_btn.classList.add('notification__btn');
+        div_close_btn.appendChild(icon);
+        div_close_btn.addEventListener("click", () => {
+            this.close();
         })
+        div_body.classList.add('notification__body');
+        div_img.classList.add('notification__img');
+
+        img.setAttribute('class', 'img_noti');
+        img.src = "/assets/personna.jpg";
+        div_img.appendChild(img);
+
+        div_message.classList.add('notification__message');
+        div_message.innerHTML = this.message;
+
+        div_header.appendChild(div_title_box);
+        div_header.appendChild(div_close_btn);
+
+        div_body.appendChild(div_img);
+        div_body.appendChild(div_message);
+
+        this.notificationBox.classList.add('notification');
+        this.notificationBox.classList.add('hidden');
+        this.notificationBox.appendChild(div_header);
+        this.notificationBox.appendChild(div_body);
+
+
+        if (delait)
+            this.timeout = delait;
+        if (type)
+            this.notification_type = type;
+
+        // let closeBtn = this.notificationBox.querySelector('.notification__btn');
+        // this.notificationBox.querySelector('.notification__message').innerHTML = this.message;
+        // this.notificationBox.querySelector('.notification__header').classList.add(this.notification_type);
+        // closeBtn.addEventListener("click", () => {
+        //    this.close();
+        // })
+        this.open();
     }
 
-    public show() {
+    public open() {
+        console.log('Bonour le monde de');
+
         this.notificationBox.classList.remove("hidden");
         setTimeout(() => {
-            this.hide()
-        }, 5000);
+            this.close()
+        }, (1000 * this.timeout));
     }
 
-    public hide() {
+    public close() {
         this.notificationBox.classList.add("hidden");
+    }
+
+    public get(): HTMLElement {
+        return this.notificationBox;
     }
 }
