@@ -1,4 +1,4 @@
-##Installation
+## Installation
 1. Cloner le projet sur https://github.com/chendjouCaleb/Scholar-Layout.git
 2. Installer les dépendances avec ```yarn install```
 3. Lancer le projet avec ``npm run start``

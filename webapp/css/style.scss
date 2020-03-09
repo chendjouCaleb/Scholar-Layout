@@ -1,5 +1,10 @@
 :root {
   --color: #3b3a39;
+  --btn_hover: #c9c6c3;
+  --success:#1ed11ed3;
+  --danger:#d11e1ed3;
+  --warning:#d17e1ed3;
+  --info:#1e8ad1d3;
 }
 
 
@@ -273,7 +278,6 @@ body {
   display: inline-block;
   line-height: 40px;
   padding-left: 10px;
-
 }
 
 .panel-close-button {
@@ -286,4 +290,75 @@ body {
 
 .panel-close-button:hover{
   backdrop-filter: brightness(2);
+}
+
+.notification{
+  background: rgba(253, 251, 251, 0.884);
+  border-radius: 10px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 300px;
+  height: 130px;
+  transition: all 0.4s;
+}
+.notification .notification__header{
+  display: flex;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  background-color: var(--warning);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: inherit;
+}
+
+.notification .notification__title{
+  padding: 0 10px;
+}
+
+.notification .notification__btn{
+  cursor: pointer;
+  border-radius: inherit;
+  padding: 0 10px;
+}
+
+.notification .notification__btn:hover{
+  background-color: var(--btn_hover);
+}
+.notification .notification__body{
+  display: flex;
+  padding: 0;
+  height: 90px;
+}
+
+.notification .notification__img .img_noti{
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding: 3px;
+  width: 90px;
+  height: 90px;
+}
+
+.notification .notification__message{
+  width: 100%;
+  padding: 10px;
+}
+
+.notification.hidden{
+  right: -300px;
+}
+
+.notification .notification__header.success{
+  background-color: var(--success);
+}
+.notification .notification__header.danger{
+  background-color: var(--danger);
+}
+.notification .notification__header.warning{
+  background-color: var(--warning);
+}
+.notification .notification__header.info{
+  background-color: var(--info);
 }
